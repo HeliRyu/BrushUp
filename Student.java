@@ -1,23 +1,25 @@
 public class Student {
-    /*
-     * 定义数组存储4个学生的对象。
-     * 学生属性:姓名、年龄、性别、爱好。
-     * 要求1：计算出4个学生的平均年龄
-     * 要求2：统计年龄比平均值低的学生有几个？并把他们的所有信息打印出来。
-     * */
+    private String id;
     private String name;
     private int age;
-    private String gender;
-    private String hobby;
+    private String address;
 
     public Student() {
     }
 
-    public Student(String name, int age, String gender, String hobby) {
+    public Student(String id, String name, int age, String address) {
+        this.id = id;
         this.name = name;
         this.age = age;
-        this.gender = gender;
-        this.hobby = hobby;
+        this.address = address;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -36,19 +38,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getGender() {
-        return gender;
+    public String getAddress() {
+        return address;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getHobby() {
-        return hobby;
-    }
-
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
